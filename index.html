@@ -19,12 +19,15 @@
     <div id="container" class="container py-2">
         <img class="logo w-25 offset-4 mb-2" src="assets/img/boolean-logo.png" alt="logo">
 
-        <div class="input-group mb-3">
+        <div class="input-group">
             <input type="text" class="form-control" placeholder="Aggiungi una cosa da fare" aria-label="Recipient's username" aria-describedby="button-addon2" v-model="newTodo.text" @keyup.enter="addTodo">
-            <button @click="addTodo" class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
+            <button @click="addTodo" class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button> <br>
         </div>
-
-        <ol class="list-group list-group-numbered">
+        <div v-show="inputError" class="error text-center mb-3">
+            <span style="color: red;">Devi inserire almeno 5 caratteri</span>
+        </div>
+        
+        <ol class="list-group list-group-numbered mt-3">
             <li 
                 v-for="(todo, i) in todos"
                 :key="todo"

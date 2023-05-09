@@ -25,6 +25,7 @@ Buon lavoro e buon divertimento!
 const app = Vue.createApp({
     data() {
         return {
+            inputError: false,
             newTodo: {
                 text: "",
                 done: false
@@ -53,11 +54,17 @@ const app = Vue.createApp({
             this.todos.splice(i, 1);
         },
         addTodo() {
-            this.todos.unshift(this.newTodo);
-            this.newTodo = {
-                text: "",
-                done: false
-            }
+            let cleanedTodo = this.newTodo.text.trim()
+            if (cleanedTodo.length >= 5) {
+                this.todos.unshift(this.newTodo);
+                this.newTodo = {
+                    text: "",
+                    done: false,
+                }
+                this.inputError = false
+            } else {
+                this.inputError = true;
+            };
         },
     },
 });
