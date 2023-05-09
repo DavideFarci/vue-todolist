@@ -20,7 +20,23 @@ Buon lavoro e buon divertimento!
 const app = Vue.createApp({
     data() {
         return {
-            
+            todos: [
+                {
+                    id: 1,
+                    todo: "Fare la spesa",
+                    done: false
+                },
+                {
+                    id: 2,
+                    todo: "Fare la lavatrice",
+                    done: false
+                },
+                {
+                    id: 1,
+                    todo: "Fare i piatti",
+                    done: false
+                },
+            ]
         };
     },
 });
