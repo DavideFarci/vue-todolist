@@ -25,6 +25,10 @@ Buon lavoro e buon divertimento!
 const app = Vue.createApp({
     data() {
         return {
+            newTodo: {
+                text: "",
+                done: false
+            },
             todos: [
                 {
                     text: "Fare la spesa",
@@ -47,7 +51,14 @@ const app = Vue.createApp({
         },
         removeTodo(i) {
             this.todos.splice(i, 1);
-        }
+        },
+        addTodo() {
+            this.todos.unshift(this.newTodo);
+            this.newTodo = {
+                text: "",
+                done: false
+            }
+        },
     },
 });
 
