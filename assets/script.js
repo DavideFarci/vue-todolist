@@ -17,23 +17,28 @@ Bonus:
 Buon lavoro e buon divertimento!
 */
 
+
+// ogni todo sarà un oggetto, formato da due proprietà:
+// - text, una stringa che indica il testo del todo
+// - done, un booleano (true/false) che indica se il todo è stato fatto oppure no
+
 const app = Vue.createApp({
     data() {
         return {
             todos: [
                 {
                     id: 1,
-                    todo: "Fare la spesa",
+                    text: "Fare la spesa",
                     done: false
                 },
                 {
                     id: 2,
-                    todo: "Fare la lavatrice",
+                    text: "Fare la lavatrice",
                     done: false
                 },
                 {
                     id: 1,
-                    todo: "Fare i piatti",
+                    text: "Fare i piatti",
                     done: false
                 },
             ]
