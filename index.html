@@ -28,11 +28,13 @@
             <li 
                 v-for="(todo, i) in todos"
                 :key="todo"
-                @click="todoIsDone(i)"
                 :class="{ done: this.todos[i].done == true }"
                 class="list-group-item position-relative"
-            >
-                {{ todo.text }}
+                >
+                <span
+                    @click="todoIsDone(i)"
+                >
+                {{ todo.text }}</span>
                 <i 
                     class="fa-solid fa-xmark"
                     @click="removeTodo"

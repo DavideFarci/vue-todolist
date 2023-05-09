@@ -46,7 +46,7 @@ const app = Vue.createApp({
             return this.todos[i].done = !this.todos[i].done;
         },
         removeTodo(i) {
-            this.todos[i].splice(i, 1);
+            this.todos.splice(i, 1);
         }
     },
 });
