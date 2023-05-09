@@ -1,0 +1,11 @@
+.logo {
+    filter:invert(1);
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+}

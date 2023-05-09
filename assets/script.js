@@ -27,23 +27,30 @@ const app = Vue.createApp({
         return {
             todos: [
                 {
-                    id: 1,
                     text: "Fare la spesa",
                     done: false
                 },
                 {
-                    id: 2,
                     text: "Fare la lavatrice",
                     done: false
                 },
                 {
-                    id: 1,
                     text: "Fare i piatti",
                     done: false
                 },
-            ]
+            ],
         };
+    },
+    methods: {
+        todoIsDone(i) {
+            return this.todos[i].done = !this.todos[i].done;
+        }
     },
 });
 
-Vue.mount("#container");
+app.mount("#container");
+
+
+// MILESTONE 1
+// Stampare all'interno di una lista HTML un item per ogni todo.
+// Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
