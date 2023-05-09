@@ -9,3 +9,10 @@
 .done {
     text-decoration: line-through;
 }
+
+.fa-xmark {
+    font-size: 1.1em;
+    position: absolute;
+    right: 20px;
+    top: 11px;
+}

@@ -26,13 +26,18 @@
 
         <ol class="list-group list-group-numbered">
             <li 
-            v-for="(todo, i) in todos"
-            :key="todo"
-            @click="todoIsDone(i)"
-            :class="{ done: this.todos[i].done == true }"
-            class="list-group-item"
+                v-for="(todo, i) in todos"
+                :key="todo"
+                @click="todoIsDone(i)"
+                :class="{ done: this.todos[i].done == true }"
+                class="list-group-item position-relative"
             >
-            {{ todo.text }}</li>
+                {{ todo.text }}
+                <i 
+                    class="fa-solid fa-xmark"
+                    @click="removeTodo"
+                ></i>
+            </li>
         </ol>
     </div>
 
